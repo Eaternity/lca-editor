@@ -1,0 +1,215 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Eaternity Database Product Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for a product",
+      "type": "integer"
+    },
+    "name": {
+      "description": "Name of the product",
+      "type": "string"
+    },
+    "co2Value": {
+      "type": "number",
+      "title": "CO2-Value [kg CO2&Auml;q/kg] (*)",
+      "description": "You can leave the CO2-value empty if this is a linked product."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "specification": {
+      "type": "string",
+      "title": "Specification"
+    },
+    "synonyms": {
+      "type": "string",
+      "title": "Synonyms"
+    },
+    "nameEnglish": {
+      "type": "string",
+      "title": "English Name"
+    },
+    "nameFrench": {
+      "type": "string",
+      "title": "French Name"
+    },
+    "nutritionId": {
+      "type": "string",
+      "title": "Nutrition Data Link*"
+    },
+    "alternatives": {
+      "type": "string",
+      "title": "Alternatives"
+    },
+    "standardOrigin": {
+      "type": "string",
+      "title": "Standard Origin"
+    },
+    "origins": {
+      "type": "string",
+      "title": "Possible origins"
+    },
+    "productionNames": {
+      "type": "string",
+      "title": "Production methods"
+    },
+    "productionValues": {
+      "type": "string",
+      "title": "Production method parameters"
+    },
+    "productionMethods": {
+      "type": "array",
+      "title": "Production Methods",
+      "items": {
+        "type": "string",
+        "title": "Production Method"
+      }
+    },
+    "processingNames": {
+      "type": "string",
+      "title": "Degrees of processing"
+    },
+    "processingValues": {
+      "type": "string",
+      "title": "Degrees of processing parameters"
+    },
+    "processingMethods": {
+      "type": "array",
+      "title": "Processing Methods",
+      "items": {
+        "type": "string",
+        "title": "Processing Method"
+      }
+    },
+    "conservationNames": {
+      "type": "string",
+      "title": "Preservation methods"
+    },
+    "conservationValues": {
+      "type": "string",
+      "title": "Preservation method parameters"
+    },
+    "preservationMethods": {
+      "type": "array",
+      "title": "Preservation Methods",
+      "items": {
+        "type": "string",
+        "title": "Preservation Method"
+      }
+    },
+    "packagingNames": {
+      "type": "string",
+      "title": "Packaging"
+    },
+    "packagingValues": {
+      "type": "string",
+      "title": "Packaging parameters"
+    },
+    "packagingMethods": {
+      "type": "array",
+      "title": "Packaging Methods",
+      "items": {
+        "type": "string",
+        "title": "Packaging Method"
+      }
+    },
+    "seasonBegin": {
+      "type": "string",
+      "title": "Start of local season"
+    },
+    "seasonEnd": {
+      "type": "string",
+      "title": "End of local season"
+    },
+    "combinedProduct": {
+      "type": "boolean",
+      "title": "Is a combined product"
+    },
+    "density": {
+      "type": "number",
+      "title": "Density [g/ml]"
+    },
+    "unitWeight": {
+      "type": "number",
+      "title": "Unit weight [g/piece]"
+    },
+    "quantityComments": {
+      "type": "string",
+      "title": "Comments of density & unit weight"
+    },
+    "quantityReferences": {
+      "type": "string",
+      "title": "References of density & unit weight"
+    },
+    "consistency": {
+      "type": "string",
+      "title": "Texture"
+    },
+    "foodwaste": {
+      "type": "number",
+      "title": "Foodwaste [%]",
+      "description": "The average percent which gets thrown away of this product, consumer included."
+    },
+    "foodwasteComment": {
+      "type": "string",
+      "title": "Comments on Foodwaste"
+    },
+    "co2Calculation": {
+      "type": "string",
+      "title": "CO2 calculation path for basic CO2-value"
+    },
+    "calculationProcessDocumentation": {
+      "type": "string",
+      "title": "Calculation process documentation",
+      "description": "Description of data used for CO2-calculation and important product traits"
+    },
+    "infoText": {
+      "type": "string",
+      "title": "Info text for cook"
+    },
+    "references": {
+      "type": "string",
+      "title": "References for basic CO2-value"
+    },
+    "otherReferences": {
+      "type": "string",
+      "title": "Other references (not used)"
+    },
+    "comments": {
+      "type": "string",
+      "title": "Comment"
+    },
+    "co2CalculationParameters": {
+      "type": "string",
+      "title": "CO2 calculation path for different product parameters"
+    },
+    "referencesParameters": {
+      "type": "string",
+      "title": "References for product parameter calculation"
+    },
+    "dataQuality": {
+      "type": "string",
+      "title": "Data quality estimation"
+    },
+    "author": {
+      "type": "string",
+      "title": "Last analyst initials"
+    },
+    "delete": {
+      "type": "boolean",
+      "title": "To delete"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "_comment": "to understand this format check: http://json-schema.org/example1.html"
+}

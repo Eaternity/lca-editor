@@ -1,0 +1,46 @@
+<md-toolbar class="md-whiteframe-1dp" ng-cloak>
+    <div class="md-toolbar-tools">
+        <div class="md-title">
+            <span>
+                <ng-md-icon icon="local_florist"></ng-md-icon>
+            </span> Settings
+        </div>
+        <span flex></span>
+        <span>
+            <md-button ng-click="settings.changeView('')"class="md-primary md-raised">
+                Back
+            </md-button>
+        </span>
+    </div>
+</md-toolbar>
+
+<md-content layout="column" flex>
+    <md-card>
+        <md-content layout-padding>
+            <div layout="row" layout-wrap class="checkboxes">
+                <md-checkbox ng-model="settings.options.rowSelection">Row Selection</md-checkbox>
+                <md-checkbox ng-model="settings.options.multiSelect">Multiple Selection</md-checkbox>
+                <md-checkbox ng-model="settings.options.autoSelect">Auto Selection</md-checkbox>
+                <md-checkbox ng-model="settings.options.decapitate">Decapitate</md-checkbox>
+                <md-checkbox ng-model="settings.options.largeEditDialog">Lard Edit Dialogs</md-checkbox>
+                <md-checkbox ng-model="settings.options.boundaryLinks">Pagination Boundary Links</md-checkbox>
+                <md-checkbox ng-model="settings.options.limitSelect" ng-click="settings.toggleLimitOptions()">Pagination Limit Select</md-checkbox>
+                <md-checkbox ng-model="settings.options.pageSelect">Pagination Page Select</md-checkbox>
+            </div>
+        </md-content>
+
+    </md-card>
+
+    <md-card>
+        <md-content layout-padding>
+            <form name="userForm">
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Set path to database</label>
+                        <input ng-model="settings.database" />
+                    </md-input-container>
+                </div>
+            </form>
+        </md-content>
+    </md-card>
+</md-content>

@@ -1,0 +1,16 @@
+{
+  "name": "lca-editor",
+  "authors": [
+    "mcmunder <matthiasmunder@gmail.com>"
+  ],
+  "description": "View and edit lca .json files",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular-material": "^1.0.6",
+    "angular-material-data-table": "^0.9.14",
+    "angular-resource": "^1.5.2",
+    "angular-material-icons": "^0.7.0",
+    "angular-route": "^1.5.3"
+  }
+}

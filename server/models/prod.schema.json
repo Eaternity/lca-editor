@@ -1,0 +1,214 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Eaternity Database Product Schema",
+    "type": "object",
+    "properties": {
+      "id": {
+             "description": "The unique identifier for a product",
+             "type": "integer"
+         },
+        "name": {
+                 "description": "Name of the product",
+                 "type": "string"
+             },
+      "co2-value": {
+        "type": "number",
+        "title": "CO2-Value [kg CO2&Auml;q/kg] (*)",
+        "description": "You can leave the CO2-value empty if this is a linked product."
+          },
+
+      "tags": {
+                  "type": "array",
+                  "items": {
+                      "type": "string"
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+          },
+      "specification": {
+        "type": "string",
+        "title": "Specification"
+      },
+      "synonyms": {
+        "type": "string",
+        "title": "Synonyms"
+      },
+      "name-english": {
+        "type": "string",
+        "title": "English Name"
+      },
+      "name-french": {
+        "type": "string",
+        "title": "French Name"
+      },
+    "nutrition-id": {
+      "type": "string",
+    "title": "Nutrition Data Link*"
+    },
+      "alternatives": {
+        "type": "string",
+        "title": "Alternatives"
+      },
+      "standard-origin": {
+        "type": "string",
+        "title": "Standard Origin"
+      },
+    "origins": {
+      "type": "string",
+    "title": "Possible origins"
+    },
+      "production-names": {
+        "type": "string",
+        "title": "Production methods"
+      },
+      "production-values": {
+        "type": "string",
+        "title": "Production method parameters"
+      },
+      "production-methods": {
+      "type": "array",
+    "title": "Production Methods",
+    "items": {
+      "type": "string",
+      "title": "Production Method"
+      }
+    },
+      "processing-names": {
+        "type": "string",
+        "title": "Degrees of processing"
+      },
+      "processing-values": {
+        "type": "string",
+        "title": "Degrees of processing parameters"
+      },
+      "processing-methods": {
+      "type": "array",
+    "title": "Processing Methods",
+    "items": {
+      "type": "string",
+      "title": "Processing Method"
+    }
+    },
+      "conservation-names": {
+        "type": "string",
+        "title": "Preservation methods"
+      },
+      "conservation-values": {
+        "type": "string",
+        "title": "Preservation method parameters"
+      },
+      "preservation-methods": {
+      "type": "array",
+    "title": "Preservation Methods",
+    "items": {
+      "type": "string",
+      "title": "Preservation Method"
+    }
+    },
+      "packaging-names": {
+        "type": "string",
+        "title": "Packaging"
+      },
+      "packaging-values": {
+        "type": "string",
+        "title": "Packaging parameters"
+      },
+      "packaging-methods": {
+      "type": "array",
+    "title": "Packaging Methods",
+    "items": {
+      "type": "string",
+      "title": "Packaging Method"
+    }
+    },
+      "season-begin": {
+        "type": "string",
+        "title": "Start of local season"
+      },
+      "season-end": {
+        "type": "string",
+        "title": "End of local season"
+      },
+      "combined-product": {
+        "type": "boolean",
+        "title": "Is a combined product"
+      },
+      "density": {
+          "type": "number",
+          "title": "Density [g/ml]"
+      },
+      "unit-weight": {
+          "type": "number",
+          "title": "Unit weight [g/piece]"
+      },
+      "quantity-comments": {
+          "type": "string",
+          "title": "Comments of density & unit weight"
+      },
+      "quantity-references": {
+          "type": "string",
+          "title": "References of density & unit weight"
+      },
+      "consistency": {
+          "type": "string",
+          "title": "Texture"
+      },
+      "foodwaste": {
+          "type": "number",
+          "title": "Foodwaste [%]",
+          "description": "The average percent which gets thrown away of this product, consumer included."
+      },
+      "foodwaste-comment": {
+          "type": "string",
+          "title": "Comments on Foodwaste"
+      },
+      "co2-calculation": {
+        "type": "string",
+        "title": "CO2 calculation path for basic CO2-value"
+      },
+      "calculation-process-documentation": {
+        "type": "string",
+        "title": "Calculation process documentation",
+    "description": "Description of data used for CO2-calculation and important product traits"
+      },
+      "info-text": {
+        "type": "string",
+        "title": "Info text for cook"
+      },
+      "references": {
+        "type": "string",
+        "title": "References for basic CO2-value"
+      },
+    "other-references": {
+      "type": "string",
+      "title": "Other references (not used)"
+    },
+      "comments": {
+        "type": "string",
+        "title": "Comment"
+      },
+    "co2-calculation-parameters": {
+      "type": "string",
+    "title": "CO2 calculation path for different product parameters"
+    },
+    "references-parameters": {
+      "type": "string",
+    "title": "References for product parameter calculation"
+    },
+     "data-quality": {
+        "type": "string",
+        "title": "Data quality estimation"
+      },
+      "author": {
+        "type": "string",
+        "title": "Last analyst initials"
+      },
+    "delete": {
+        "type": "boolean",
+        "title": "To delete"
+    }
+
+   },
+   "required": ["id", "name"],
+   "_comment": "to understand this format check: http://json-schema.org/example1.html"
+}

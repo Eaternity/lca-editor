@@ -1,0 +1,51 @@
+<md-toolbar class="md-whiteframe-1dp" ng-cloak>
+    <div class="md-toolbar-tools">
+        <div class="md-title">
+            <span>
+                <ng-md-icon icon="local_florist"></ng-md-icon>
+            </span> Edit: {{edit.product.nameEnglish}}
+        </div>
+        <span flex></span>
+        <span>
+            <md-button ng-click="edit.changeView('')"class="md-primary md-raised">
+                Back
+            </md-button>
+        </span>
+    </div>
+</md-toolbar>
+
+<md-content layout-padding>
+    <md-card>
+        <md-content class="md-no-momentum">
+            <form class="form-horizontal" ng-submit="edit.saveChanges()">
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Name</label>
+                    <input ng-model="edit.product.name" type="text">
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Name (eng)</label>
+                    <input ng-model="edit.product.nameEnglish" type="text">
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>CO<sub>2</sub> value</label>
+                    <input ng-model="edit.product.co2Value" type="text">
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Sy<sub>2</sub> value</label>
+                    <input ng-model="edit.product.synonyms" type="text">
+                </md-input-container>
+                <md-button ng-click="edit.changeView('')" class="md-primary md-raised">
+                    Cancel
+                </md-button>
+                <md-button type="submit" class="md-primary md-raised">
+                    Save changes
+                </md-button>
+            </form>
+        </md-content>
+
+    </md-card>
+</md-content>
